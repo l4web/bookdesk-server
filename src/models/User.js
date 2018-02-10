@@ -19,7 +19,7 @@ const schema = new mongoose.Schema(
     },
     { timestamps: true }
 );
-
+// zwraca true lub false z bcrypt'a
 schema.methods.isValidPassword = function isValidPassword(password) {
     return bcrypt.compareSync(password, this.passwordHash);
 };
